@@ -10,8 +10,8 @@ public class Main {
 	student.setLastName("Pınar");
 	student.setEmail("sefa@gmail.com");
 	student.setPassword("21321");
-	
 	student.getStudentCourses();
+	
 	
 	StudentManager studentManager = new StudentManager();
 	studentManager.Add(student);

@@ -11,15 +11,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
+@NoArgsConstructor //Boş ctor oluşturuyor.
+@AllArgsConstructor //Dolu ctor oluşturuyor.
 @Entity
-@Table(name="job_positions")
+@Table(name="job_positions")  //veri tabanında tablo ismi.
 public class JobPositions {
 	
 	
-	@Id
-	@GeneratedValue
+	@Id //veri tabanında kendisi oluşan değer.
+	@GeneratedValue //idendtity değer olmasını sağlar.
 	@Column(name="id")
 	private int id;
 	

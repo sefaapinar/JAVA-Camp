@@ -7,4 +7,6 @@ import kodlamaio.entities.concretes.JobPositions;
 public interface JobPositionsService {
 	
 	List<JobPositions>getAll();
+	
+	JobPositions newJobPositions(JobPositions newJobPosition);
 }

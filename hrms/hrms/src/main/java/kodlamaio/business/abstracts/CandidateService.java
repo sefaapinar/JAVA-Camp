@@ -7,4 +7,6 @@ import kodlamaio.entities.concretes.Candidate;
 public interface CandidateService {
 
 	List<Candidate>getAll();
+	
+	String add(Candidate candidate);
 }

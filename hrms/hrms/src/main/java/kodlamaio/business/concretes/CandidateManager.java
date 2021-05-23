@@ -24,5 +24,11 @@ public class CandidateManager implements CandidateService {
 	public List<Candidate> getAll() {
 		return this.candidateDao.findAll(); //Tüm verileri getir.
 	}
+	@Override
+	public String add(Candidate candidate) {
+		
+		this.candidateDao.save(candidate);
+		return "Added!";
+	}
 	
 }

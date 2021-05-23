@@ -2,11 +2,11 @@ package kodlamaio.business.abstracts;
 
 import java.util.List;
 
-import kodlamaio.entities.concretes.JobPositions;
+import kodlamaio.entities.concretes.JobTitle;
 
 public interface JobPositionsService {
 	
-	List<JobPositions>getAll();
+	List<JobTitle>getAll();
 	
-	JobPositions newJobPositions(JobPositions newJobPosition);
+	JobTitle newJobPositions(JobTitle newJobPosition);
 }

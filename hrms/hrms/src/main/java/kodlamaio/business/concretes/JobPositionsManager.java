@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import kodlamaio.business.abstracts.JobPositionsService;
 import kodlamaio.dataAccess.abstracts.JobPositionsDao;
-import kodlamaio.entities.concretes.JobPositions;
+import kodlamaio.entities.concretes.JobTitle;
 
 @Service
 public class JobPositionsManager implements JobPositionsService{
@@ -20,11 +20,11 @@ public class JobPositionsManager implements JobPositionsService{
 		this.jobPositionsDao = jobPositionsDao;
 	}
 	@Override
-	public List<JobPositions> getAll() {
+	public List<JobTitle> getAll() {
 		return this.jobPositionsDao.findAll();
 	}
 	@Override
-	public JobPositions newJobPositions(JobPositions newJobPosition) {
+	public JobTitle newJobPositions(JobTitle newJobPosition) {
 		
 		return jobPositionsDao.save(newJobPosition);
 	}

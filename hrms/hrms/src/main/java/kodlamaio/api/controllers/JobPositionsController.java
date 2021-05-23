@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import kodlamaio.business.abstracts.JobPositionsService;
-import kodlamaio.entities.concretes.JobPositions;
+import kodlamaio.entities.concretes.JobTitle;
 
 @RestController
 @RequestMapping("/api/jobs")
@@ -25,12 +25,12 @@ public class JobPositionsController {
 	}
 	
 	@GetMapping("/getall")
-	public List<JobPositions> getAll(){
+	public List<JobTitle> getAll(){
 		return this.jobPositionsService.getAll();
 	}
 	
 	@PostMapping("/add")
-	public JobPositions newJobPosition(@RequestBody JobPositions newJobPosition) {
+	public JobTitle newJobPosition(@RequestBody JobTitle newJobPosition) {
 		return this.jobPositionsService.newJobPositions(newJobPosition);
 	}
 	

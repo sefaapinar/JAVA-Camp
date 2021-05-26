@@ -4,12 +4,13 @@ import java.util.List;
 
 import kodlamaio.core.utilities.DataResult;
 import kodlamaio.core.utilities.Result;
+import kodlamaio.entities.concretes.Candidate;
 import kodlamaio.entities.concretes.JobTitle;
+import kodlamaio.entities.concretes.User;
 
-public interface JobPositionsService {
+public interface UserService {
 	
-	DataResult<List<JobTitle>>getAll();
-	DataResult<JobTitle> getByTitle(String title);
-	Result add(JobTitle jobTitle);
-	
+	DataResult<List<User>>getAll();
+	Result add(User user);
+
 }

@@ -10,34 +10,35 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import kodlamaio.business.abstracts.CandidateService;
+import kodlamaio.core.utilities.DataResult;
+import kodlamaio.core.utilities.Result;
 import kodlamaio.entities.concretes.Candidate;
 
 
 @RestController
 @RequestMapping("/api/candidates")
-public class CandidateController {
+public class CandidatesController {
 
 private CandidateService candidateService;
 	
 	
 	@Autowired
-	public CandidateController(CandidateService candidateService) {
+	public CandidatesController(CandidateService candidateService) {
 	super();
 	this.candidateService = candidateService;
 }
 
 
 	@GetMapping("/getall")
-	public List<Candidate> getAll(){
+	public DataResult<List<Candidate>> getAll(){
 		return this.candidateService.getAll();
 	}
 	
 	
 	@PostMapping("/add")
-	public String add(@RequestBody Candidate candidate) {
+	public Result add(@RequestBody Candidate candidate) {
 		
-		this.candidateService.add(candidate);
-		return "Added!";
+		return this.candidateService.add(candidate);
 	}
 	
 }

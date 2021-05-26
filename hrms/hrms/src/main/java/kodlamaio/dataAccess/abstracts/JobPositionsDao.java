@@ -6,4 +6,7 @@ import kodlamaio.entities.concretes.JobTitle;
 
 public interface JobPositionsDao extends JpaRepository<JobTitle,Integer> {
 
+	JobTitle findByTitle(String title);
+	
+	boolean existsByTitle(String title);
 }
